@@ -15,17 +15,17 @@ Here we have used two versions of the FinBERT model available in HuggingFace:-
 
 All datasets were downloaded from Kaggle :- 
 
-1.Sentiment Analysis for Financial News dataset :-
+1.**Sentiment Analysis for Financial News dataset :-**
 This dataset (FinancialPhraseBank) contains the sentiments for financial news headlines from the perspective of a retail investor.The dataset contains two columns, "Sentiment" and "News Headline". The sentiment can be negative, neutral or positive.It contains a total of 4846 rows.Dataset link is https://www.kaggle.com/datasets/ankurzing/sentiment-analysis-for-financial-news/data
 
-2.Financial Sentiment Analysis dataset :-
+2.**Financial Sentiment Analysis dataset :-**
 The dataset is intended for advancing financial sentiment analysis research. It's two datasets (FiQA, Financial PhraseBank) combined into one easy-to-use CSV file. It contains 5844 rows with 2 columns,”Sentence” and “Sentiment”. It provides financial sentences with sentiment labels.Dataset link is https://www.kaggle.com/datasets/sbhatti/financial-sentiment-analysis/data
 
 # Methodology :-
 
 Each of the sentences in both the datasets were directly subjected to the HuggingFace sentiment analysis pipeline.The pipelines are a great and easy way to use models for inference. These pipelines are objects that abstract most of the complex code from the library, offering a simple API dedicated to several tasks, including Named Entity Recognition, Masked Language Modeling, Sentiment Analysis, Feature Extraction and Question Answering.The pipeline simplifies the process of passing text through the tokenizer and model to generate sentiment predictions.
 
-The accuracy of the predictions was computed using the accuracy_score function, and the confusion matrix was generated to assess the model's classification performance.
+The performance of the sentiment analysis was assessed by comparing the predicted sentiment labels to the true sentiment labels in the dataset. The accuracy of the predictions was calculated using the accuracy_score function, and a confusion matrix was created to evaluate the model's classification performance.
 
-The model which gave higher accuracy on either of the datasets was chosen to be fine-tuned[12] for further enhancing its performance.It was generally observed that ProsusAI FinBERT Model gave better results than the HKUST(yiyanghkust) FinBERT Model. 
+The model which gave higher accuracy on either of the datasets was chosen to be fine-tuned for further enhancing its performance.It was generally observed that ProsusAI FinBERT Model gave better results than the HKUST(yiyanghkust) FinBERT Model. 
 
